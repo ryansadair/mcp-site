@@ -1,247 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Insights | Martin Capital Partners</title>
-  <meta name="description" content="Quarterly commentary archive from Martin Capital Partners — perspectives on dividend investing, markets, and long-term capital stewardship since 2010." />
-  <link rel="stylesheet" href="assets/styles.css" />
-  <link rel="icon" type="image/png" href="assets/logo.png" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insights | Martin Capital Partners</title>
+<meta name="description" content="Martin Capital Partners' quarterly Point of View letters — 56 letters on dividends, durability, and risk, written continuously since 2010.">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;700&family=Wix+Madefor+Text:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo">
-        <img src="assets/logo.png" alt="Martin Capital Partners logo" />
-        <span class="nav-logo-text">Martin Capital<br />Partners</span>
-      </a>
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
-      <ul class="nav-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="team.html">MCP Team</a></li>
-        <li><a href="philosophy.html">Investment Philosophy</a></li>
-        <li><a href="insights.html" class="active">Insights</a></li>
-        <li><a href="index.html#client-resources">Client Resources</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-      </ul>
+<div class="page">
+
+<header class="site">
+  <a class="logo" href="index.html"><img src="assets/logo.png" alt="Martin Capital Partners logo"></a>
+  <button class="menu-btn" aria-label="Open menu" onclick="openMenu()"><span></span><span></span></button>
+</header>
+
+<nav class="menu-overlay" id="menuOverlay" aria-label="Site menu">
+  <button class="menu-close" aria-label="Close menu" onclick="closeMenu()">&times;</button>
+  <a href="index.html">Home</a>
+  <a href="team.html">MCP Team</a>
+  <a href="philosophy.html">Investment Philosophy</a>
+  <a href="insights.html" onclick="closeMenu()">Insights</a>
+  <a href="index.html#resources">Client Resources</a>
+  <a href="index.html#contact">Contact</a>
+</nav>
+
+<h1 class="page-title">Insights</h1>
+
+<div class="wrap">
+  <div class="featured-letter">
+    <div class="kicker">Latest &middot; Point of View</div>
+    <h2>The Comfort of Crowds</h2>
+    <div class="date">July 2026</div>
+    <a class="btn" href="assets/letters/2026-jul-the-comfort-of-crowds.pdf" target="_blank" rel="noopener">Read the Letter <span class="arrow"></span></a>
+  </div>
+
+  <div class="year-block">
+    <div class="year">2026</div>
+    <a class="insight-box" href="assets/letters/2026-apr-durability-vs-prediction.pdf" target="_blank" rel="noopener"><span>Durability vs. Prediction</span><span class="when">April 2026</span></a>
+    <a class="insight-box" href="assets/letters/2026-jan-paid-better-taking-less-risk.pdf" target="_blank" rel="noopener"><span>Paid Better Taking Less Risk</span><span class="when">January 2026</span></a>
+  </div>
+  <div class="year-block">
+    <div class="year">2025</div>
+    <a class="insight-box" href="assets/letters/2025-oct-echoes.pdf" target="_blank" rel="noopener"><span>Echoes</span><span class="when">October 2025</span></a>
+    <a class="insight-box" href="assets/letters/2025-jul-tectonic-shifts.pdf" target="_blank" rel="noopener"><span>Tectonic Shifts</span><span class="when">July 2025</span></a>
+  </div>
+  <div class="year-block">
+    <div class="year">2023</div>
+    <a class="insight-box" href="assets/letters/2023-apr-coming-home-ii.pdf" target="_blank" rel="noopener"><span>Coming Home II</span><span class="when">April 2023</span></a>
+    <a class="insight-box" href="assets/letters/2023-jan-home-to-roost.pdf" target="_blank" rel="noopener"><span>Home To Roost</span><span class="when">January 2023</span></a>
+  </div>
+  <div class="year-block">
+    <div class="year">2022</div>
+    <a class="insight-box" href="assets/letters/2022-oct-inflation-valuation.pdf" target="_blank" rel="noopener"><span>Inflation & Valuation</span><span class="when">October 2022</span></a>
+    <a class="insight-box" href="assets/letters/2022-jul-paradigm-shift.pdf" target="_blank" rel="noopener"><span>Paradigm Shift?</span><span class="when">July 2022</span></a>
+    <a class="insight-box" href="assets/letters/2022-apr-unfortunate-reality.pdf" target="_blank" rel="noopener"><span>Unfortunate Reality</span><span class="when">April 2022</span></a>
+    <a class="insight-box" href="assets/letters/2022-jan-first-do-no-harm.pdf" target="_blank" rel="noopener"><span>First, Do No Harm</span><span class="when">January 2022</span></a>
+  </div>
+  <div class="year-block">
+    <div class="year">2021</div>
+    <a class="insight-box" href="assets/letters/2021-oct-25-years.pdf" target="_blank" rel="noopener"><span>25 Years</span><span class="when">October 2021</span></a>
+    <a class="insight-box" href="assets/letters/2021-jul-what-s-risk.pdf" target="_blank" rel="noopener"><span>What's Risk?</span><span class="when">July 2021</span></a>
+    <a class="insight-box" href="assets/letters/2021-apr-inflation-duration.pdf" target="_blank" rel="noopener"><span>Inflation & Duration</span><span class="when">April 2021</span></a>
+    <a class="insight-box" href="assets/letters/2021-jan-play-your-own-game.pdf" target="_blank" rel="noopener"><span>Play Your Own Game</span><span class="when">January 2021</span></a>
+  </div>
+  <div class="year-block">
+    <div class="year">2020</div>
+    <a class="insight-box" href="assets/letters/2020-oct-history-rhymes-1999.pdf" target="_blank" rel="noopener"><span>History Rhymes, #1999</span><span class="when">October 2020</span></a>
+    <a class="insight-box" href="assets/letters/2020-jul-10-years.pdf" target="_blank" rel="noopener"><span>10 Years</span><span class="when">July 2020</span></a>
+    <a class="insight-box" href="assets/letters/2020-apr-black-swans-buffett-lessons.pdf" target="_blank" rel="noopener"><span>Black Swans & Buffett Lessons</span><span class="when">April 2020</span></a>
+    <a class="insight-box" href="assets/letters/2020-jan-remarkable-decade.pdf" target="_blank" rel="noopener"><span>Remarkable Decade</span><span class="when">January 2020</span></a>
+  </div>
+  <div class="year-block">
+    <div class="year">2019</div>
+    <a class="insight-box" href="assets/letters/2019-oct-don-t-reach.pdf" target="_blank" rel="noopener"><span>Don't Reach</span><span class="when">October 2019</span></a>
+    <a class="insight-box" href="assets/letters/2019-jul-tolerance-over-avoidance.pdf" target="_blank" rel="noopener"><span>Tolerance Over Avoidance</span><span class="when">July 2019</span></a>
+    <a class="insight-box" href="assets/letters/2019-apr-third-mandate-a-less-conspicuous-fed.pdf" target="_blank" rel="noopener"><span>Third Mandate? A Less Conspicuous Fed</span><span class="when">April 2019</span></a>
+    <a class="insight-box" href="assets/letters/2019-jan-invest-like-an-owner.pdf" target="_blank" rel="noopener"><span>Invest Like an Owner</span><span class="when">January 2019</span></a>
+  </div>
+  <div class="year-block">
+    <div class="year">2018</div>
+    <a class="insight-box" href="assets/letters/2018-oct-disciplined-not-dogmatic.pdf" target="_blank" rel="noopener"><span>Disciplined, Not Dogmatic</span><span class="when">October 2018</span></a>
+    <a class="insight-box" href="assets/letters/2018-jul-trump-smoot-and-hawley.pdf" target="_blank" rel="noopener"><span>Trump, Smoot and Hawley</span><span class="when">July 2018</span></a>
+    <a class="insight-box" href="assets/letters/2018-apr-tariffs-trade.pdf" target="_blank" rel="noopener"><span>Tariffs & Trade</span><span class="when">April 2018</span></a>
+    <a class="insight-box" href="assets/letters/2018-jan-coming-home.pdf" target="_blank" rel="noopener"><span>Coming Home</span><span class="when">January 2018</span></a>
+  </div>
+  <div class="year-block">
+    <div class="year">2017</div>
+    <a class="insight-box" href="assets/letters/2017-oct-finance-of-the-shallows.pdf" target="_blank" rel="noopener"><span>Finance of 'The Shallows'</span><span class="when">October 2017</span></a>
+    <a class="insight-box" href="assets/letters/2017-jul-passive.pdf" target="_blank" rel="noopener"><span>'Passive'</span><span class="when">July 2017</span></a>
+    <a class="insight-box" href="assets/letters/2017-apr-pendulum-plotting.pdf" target="_blank" rel="noopener"><span>Pendulum Plotting</span><span class="when">April 2017</span></a>
+    <a class="insight-box" href="assets/letters/2017-jan-the-unexpected-as-expected.pdf" target="_blank" rel="noopener"><span>The Unexpected, as Expected</span><span class="when">January 2017</span></a>
+  </div>
+  <div class="year-block">
+    <div class="year">2016</div>
+    <a class="insight-box" href="assets/letters/2016-oct-comfortable-crossing-the-line.pdf" target="_blank" rel="noopener"><span>Comfortable Crossing the Line</span><span class="when">October 2016</span></a>
+    <a class="insight-box" href="assets/letters/2016-jul-brits-boogie.pdf" target="_blank" rel="noopener"><span>Brits Boogie</span><span class="when">July 2016</span></a>
+    <a class="insight-box" href="assets/letters/2016-apr-dovish-double-down.pdf" target="_blank" rel="noopener"><span>Dovish Double Down</span><span class="when">April 2016</span></a>
+    <a class="insight-box" href="assets/letters/2016-jan-fang-fad.pdf" target="_blank" rel="noopener"><span>FANG Fad</span><span class="when">January 2016</span></a>
+  </div>
+  <div class="year-block">
+    <div class="year">2015</div>
+    <a class="insight-box" href="assets/letters/2015-oct-voting-and-weighing.pdf" target="_blank" rel="noopener"><span>Voting and Weighing</span><span class="when">October 2015</span></a>
+    <a class="insight-box" href="assets/letters/2015-jul-undermined-incentive-for-responsibility.pdf" target="_blank" rel="noopener"><span>Undermined Incentive for Responsibility</span><span class="when">July 2015</span></a>
+    <a class="insight-box" href="assets/letters/2015-apr-intelligent-investor.pdf" target="_blank" rel="noopener"><span>Intelligent Investor</span><span class="when">April 2015</span></a>
+    <a class="insight-box" href="assets/letters/2015-jan-mispricing-risk.pdf" target="_blank" rel="noopener"><span>Mispricing Risk</span><span class="when">January 2015</span></a>
+  </div>
+  <div class="year-block">
+    <div class="year">2014</div>
+    <a class="insight-box" href="assets/letters/2014-oct-impolitic-fed.pdf" target="_blank" rel="noopener"><span>Impolitic Fed</span><span class="when">October 2014</span></a>
+    <a class="insight-box" href="assets/letters/2014-jul-tomfoolerly.pdf" target="_blank" rel="noopener"><span>Tomfoolerly</span><span class="when">July 2014</span></a>
+    <a class="insight-box" href="assets/letters/2014-apr-the-point-is.pdf" target="_blank" rel="noopener"><span>The Point Is?</span><span class="when">April 2014</span></a>
+    <a class="insight-box" href="assets/letters/2014-jan-windshield-not-rear-view-mirror.pdf" target="_blank" rel="noopener"><span>Windshield, Not Rear View Mirror</span><span class="when">January 2014</span></a>
+  </div>
+  <div class="year-block">
+    <div class="year">2013</div>
+    <a class="insight-box" href="assets/letters/2013-oct-what-have-we-learned.pdf" target="_blank" rel="noopener"><span>What Have We Learned?</span><span class="when">October 2013</span></a>
+    <a class="insight-box" href="assets/letters/2013-jul-diversify-the-dividend-stream.pdf" target="_blank" rel="noopener"><span>Diversify the Dividend Stream</span><span class="when">July 2013</span></a>
+    <a class="insight-box" href="assets/letters/2013-apr-navigating-the-w.pdf" target="_blank" rel="noopener"><span>Navigating the W</span><span class="when">April 2013</span></a>
+    <a class="insight-box" href="assets/letters/2013-jan-debt-a-dividend-tipping-point.pdf" target="_blank" rel="noopener"><span>Debt & a Dividend Tipping Point?</span><span class="when">January 2013</span></a>
+  </div>
+  <div class="year-block">
+    <div class="year">2012</div>
+    <a class="insight-box" href="assets/letters/2012-oct-skinny-dipping-at-low-tide.pdf" target="_blank" rel="noopener"><span>Skinny Dipping at Low Tide</span><span class="when">October 2012</span></a>
+    <a class="insight-box" href="assets/letters/2012-jul-the-tax-issue.pdf" target="_blank" rel="noopener"><span>The Tax Issue</span><span class="when">July 2012</span></a>
+    <a class="insight-box" href="assets/letters/2012-apr-a-bird-in-the-hand-is-worth-two-in-the-bush.pdf" target="_blank" rel="noopener"><span>A Bird in the Hand is Worth Two in the Bush</span><span class="when">April 2012</span></a>
+    <a class="insight-box" href="assets/letters/2012-jan-bridging-rough-water.pdf" target="_blank" rel="noopener"><span>Bridging Rough Water</span><span class="when">January 2012</span></a>
+  </div>
+  <div class="year-block">
+    <div class="year">2011</div>
+    <a class="insight-box" href="assets/letters/2011-oct-motion-sickness.pdf" target="_blank" rel="noopener"><span>Motion Sickness</span><span class="when">October 2011</span></a>
+    <a class="insight-box" href="assets/letters/2011-jul-earnings-only-a-means-to-an-end.pdf" target="_blank" rel="noopener"><span>Earnings Only a Means to an End</span><span class="when">July 2011</span></a>
+    <a class="insight-box" href="assets/letters/2011-apr-austerity-inflate-devalue.pdf" target="_blank" rel="noopener"><span>Austerity, Inflate, Devalue?</span><span class="when">April 2011</span></a>
+    <a class="insight-box" href="assets/letters/2011-jan-show-us-the-money.pdf" target="_blank" rel="noopener"><span>Show Us The Money</span><span class="when">January 2011</span></a>
+  </div>
+  <div class="year-block">
+    <div class="year">2010</div>
+    <a class="insight-box" href="assets/letters/2010-oct-uniquely-opportune-time.pdf" target="_blank" rel="noopener"><span>Uniquely Opportune Time</span><span class="when">October 2010</span></a>
+  </div>
+</div>
+
+<footer class="site" id="contact" style="margin-top:60px">
+  <div class="rule"></div>
+  <div class="footer-inner">
+    <h3>Contact Us</h3>
+    <div class="addr">
+      <p class="firm">Martin Capital Partners, LLC</p>
+      <p>940 Willamette Street, Suite 350</p>
+      <p>Eugene, Oregon 97401</p>
+      <p><a href="mailto:info@martincp.com">info@martincp.com</a> &nbsp;|&nbsp; 541.636.4170</p>
     </div>
-  </header>
-
-  <main>
-    <section class="page-banner">
-      <h1>Insights</h1>
-    </section>
-
-    <section class="section">
-      <div class="container-narrow">
-
-        <div class="insights-section">
-          <h2 class="insights-year">2026</h2>
-          <ul class="insights-list">
-            <li><a href="#"><span class="insight-title">Durability vs. Prediction</span><span class="insight-date">April 2026</span></a></li>
-            <li><a href="#"><span class="insight-title">Paid Better Taking Less Risk</span><span class="insight-date">January 2026</span></a></li>
-          </ul>
-        </div>
-
-        <div class="insights-section">
-          <h2 class="insights-year">2025</h2>
-          <ul class="insights-list">
-            <li><a href="#"><span class="insight-title">Echoes</span><span class="insight-date">October 2025</span></a></li>
-            <li><a href="#"><span class="insight-title">Tectonic Shifts</span><span class="insight-date">July 2025</span></a></li>
-          </ul>
-        </div>
-
-        <div class="insights-section">
-          <h2 class="insights-year">2023</h2>
-          <ul class="insights-list">
-            <li><a href="#"><span class="insight-title">Coming Home II</span><span class="insight-date">April 2023</span></a></li>
-            <li><a href="#"><span class="insight-title">Home To Roost</span><span class="insight-date">January 2023</span></a></li>
-          </ul>
-        </div>
-
-        <div class="insights-section">
-          <h2 class="insights-year">2022</h2>
-          <ul class="insights-list">
-            <li><a href="#"><span class="insight-title">Inflation &amp; Valuation</span><span class="insight-date">October 2022</span></a></li>
-            <li><a href="#"><span class="insight-title">Paradigm Shift?</span><span class="insight-date">July 2022</span></a></li>
-            <li><a href="#"><span class="insight-title">Unfortunate Reality</span><span class="insight-date">April 2022</span></a></li>
-            <li><a href="#"><span class="insight-title">First, Do No Harm</span><span class="insight-date">January 2022</span></a></li>
-          </ul>
-        </div>
-
-        <div class="insights-section">
-          <h2 class="insights-year">2021</h2>
-          <ul class="insights-list">
-            <li><a href="#"><span class="insight-title">25 Years</span><span class="insight-date">October 2021</span></a></li>
-            <li><a href="#"><span class="insight-title">What's Risk?</span><span class="insight-date">July 2021</span></a></li>
-            <li><a href="#"><span class="insight-title">Inflation &amp; Duration</span><span class="insight-date">April 2021</span></a></li>
-            <li><a href="#"><span class="insight-title">Play Your Own Game</span><span class="insight-date">January 2021</span></a></li>
-          </ul>
-        </div>
-
-        <div class="insights-section">
-          <h2 class="insights-year">2020</h2>
-          <ul class="insights-list">
-            <li><a href="#"><span class="insight-title">History Rhymes, #1999</span><span class="insight-date">October 2020</span></a></li>
-            <li><a href="#"><span class="insight-title">10 Years</span><span class="insight-date">July 2020</span></a></li>
-            <li><a href="#"><span class="insight-title">Black Swans &amp; Buffett Lessons</span><span class="insight-date">April 2020</span></a></li>
-            <li><a href="#"><span class="insight-title">Remarkable Decade</span><span class="insight-date">January 2020</span></a></li>
-          </ul>
-        </div>
-
-        <div class="insights-section">
-          <h2 class="insights-year">2019</h2>
-          <ul class="insights-list">
-            <li><a href="#"><span class="insight-title">Don't Reach</span><span class="insight-date">October 2019</span></a></li>
-            <li><a href="#"><span class="insight-title">Tolerance Over Avoidance</span><span class="insight-date">July 2019</span></a></li>
-            <li><a href="#"><span class="insight-title">Third Mandate? A Less Conspicuous Fed</span><span class="insight-date">April 2019</span></a></li>
-            <li><a href="#"><span class="insight-title">Invest Like an Owner</span><span class="insight-date">January 2019</span></a></li>
-          </ul>
-        </div>
-
-        <div class="insights-section">
-          <h2 class="insights-year">2018</h2>
-          <ul class="insights-list">
-            <li><a href="#"><span class="insight-title">Disciplined, Not Dogmatic</span><span class="insight-date">October 2018</span></a></li>
-            <li><a href="#"><span class="insight-title">Trump, Smoot and Hawley</span><span class="insight-date">July 2018</span></a></li>
-            <li><a href="#"><span class="insight-title">Tariffs &amp; Trade</span><span class="insight-date">April 2018</span></a></li>
-            <li><a href="#"><span class="insight-title">Coming Home</span><span class="insight-date">January 2018</span></a></li>
-          </ul>
-        </div>
-
-        <div class="insights-section">
-          <h2 class="insights-year">2017</h2>
-          <ul class="insights-list">
-            <li><a href="#"><span class="insight-title">Finance of 'The Shallows'</span><span class="insight-date">October 2017</span></a></li>
-            <li><a href="#"><span class="insight-title">'Passive'</span><span class="insight-date">July 2017</span></a></li>
-            <li><a href="#"><span class="insight-title">Pendulum Plotting</span><span class="insight-date">April 2017</span></a></li>
-            <li><a href="#"><span class="insight-title">The Unexpected, as Expected</span><span class="insight-date">January 2017</span></a></li>
-          </ul>
-        </div>
-
-        <div class="insights-section">
-          <h2 class="insights-year">2016</h2>
-          <ul class="insights-list">
-            <li><a href="#"><span class="insight-title">Comfortable Crossing the Line</span><span class="insight-date">October 2016</span></a></li>
-            <li><a href="#"><span class="insight-title">Brits Boogie</span><span class="insight-date">July 2016</span></a></li>
-            <li><a href="#"><span class="insight-title">Dovish Double Down</span><span class="insight-date">April 2016</span></a></li>
-            <li><a href="#"><span class="insight-title">FANG Fad</span><span class="insight-date">January 2016</span></a></li>
-          </ul>
-        </div>
-
-        <div class="insights-section">
-          <h2 class="insights-year">2015</h2>
-          <ul class="insights-list">
-            <li><a href="#"><span class="insight-title">Voting and Weighing</span><span class="insight-date">October 2015</span></a></li>
-            <li><a href="#"><span class="insight-title">Undermined Incentive for Responsibility</span><span class="insight-date">July 2015</span></a></li>
-            <li><a href="#"><span class="insight-title">Intelligent Investor</span><span class="insight-date">April 2015</span></a></li>
-            <li><a href="#"><span class="insight-title">Mispricing Risk</span><span class="insight-date">January 2015</span></a></li>
-          </ul>
-        </div>
-
-        <div class="insights-section">
-          <h2 class="insights-year">2014</h2>
-          <ul class="insights-list">
-            <li><a href="#"><span class="insight-title">Impolitic Fed</span><span class="insight-date">October 2014</span></a></li>
-            <li><a href="#"><span class="insight-title">Tomfoolerly</span><span class="insight-date">July 2014</span></a></li>
-            <li><a href="#"><span class="insight-title">The Point Is?</span><span class="insight-date">April 2014</span></a></li>
-            <li><a href="#"><span class="insight-title">Windshield, Not Rear View Mirror</span><span class="insight-date">January 2014</span></a></li>
-          </ul>
-        </div>
-
-        <div class="insights-section">
-          <h2 class="insights-year">2013</h2>
-          <ul class="insights-list">
-            <li><a href="#"><span class="insight-title">What Have We Learned?</span><span class="insight-date">October 2013</span></a></li>
-            <li><a href="#"><span class="insight-title">Diversify the Dividend Stream</span><span class="insight-date">July 2013</span></a></li>
-            <li><a href="#"><span class="insight-title">Navigating the W</span><span class="insight-date">April 2013</span></a></li>
-            <li><a href="#"><span class="insight-title">Debt &amp; a Dividend Tipping Point?</span><span class="insight-date">January 2013</span></a></li>
-          </ul>
-        </div>
-
-        <div class="insights-section">
-          <h2 class="insights-year">2012</h2>
-          <ul class="insights-list">
-            <li><a href="#"><span class="insight-title">Skinny Dipping at Low Tide</span><span class="insight-date">October 2012</span></a></li>
-            <li><a href="#"><span class="insight-title">The Tax Issue</span><span class="insight-date">July 2012</span></a></li>
-            <li><a href="#"><span class="insight-title">A Bird in the Hand is Worth Two in the Bush</span><span class="insight-date">April 2012</span></a></li>
-            <li><a href="#"><span class="insight-title">Bridging Rough Water</span><span class="insight-date">January 2012</span></a></li>
-          </ul>
-        </div>
-
-        <div class="insights-section">
-          <h2 class="insights-year">2011</h2>
-          <ul class="insights-list">
-            <li><a href="#"><span class="insight-title">Motion Sickness</span><span class="insight-date">October 2011</span></a></li>
-            <li><a href="#"><span class="insight-title">Earnings Only a Means to an End</span><span class="insight-date">July 2011</span></a></li>
-            <li><a href="#"><span class="insight-title">Austerity, Inflate, Devalue?</span><span class="insight-date">April 2011</span></a></li>
-            <li><a href="#"><span class="insight-title">Show Us The Money</span><span class="insight-date">January 2011</span></a></li>
-          </ul>
-        </div>
-
-        <div class="insights-section">
-          <h2 class="insights-year">2010</h2>
-          <ul class="insights-list">
-            <li><a href="#"><span class="insight-title">Uniquely Opportune Time</span><span class="insight-date">October 2010</span></a></li>
-          </ul>
-        </div>
-
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer" id="contact">
-    <div class="footer-container">
-      <div class="footer-col">
-        <h4>Contact Us</h4>
-        <address>
-          <p><strong style="color: #fff;">Martin Capital Partners, LLC</strong></p>
-          <p>940 Willamette Street, Suite 350<br />Eugene, Oregon 97401</p>
-          <p style="margin-top: 12px;">
-            <a href="mailto:info@martincp.com">info@martincp.com</a><br />
-            541.636.4170
-          </p>
-        </address>
-      </div>
-
-      <div class="footer-col">
-        <h4>Navigate</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="team.html">MCP Team</a></li>
-          <li><a href="philosophy.html">Investment Philosophy</a></li>
-          <li><a href="insights.html">Insights</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Disclosures</h4>
-        <ul>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms &amp; Conditions</a></li>
-          <li><a href="#">Form ADV II</a></li>
-          <li><a href="#">Form ADV III (CRS)</a></li>
-        </ul>
-      </div>
+    <div class="legal">
+      <a href="assets/docs/privacy-policy.pdf" target="_blank" rel="noopener">Privacy Policy</a>
+      <a href="assets/docs/terms-and-conditions.pdf" target="_blank" rel="noopener">Terms &amp; Conditions</a>
+      <a href="assets/docs/form-adv-ii.pdf" target="_blank" rel="noopener">Form ADV II</a>
+      <a href="assets/docs/form-adv-iii-crs.pdf" target="_blank" rel="noopener">Form ADV III (CRS)</a>
     </div>
+    <p class="copyright">&copy; 2026 Martin Capital Partners</p>
+    <a class="linkedin" href="https://www.linkedin.com/company/martin-capital-partners-llc/about/" target="_blank" rel="noopener" aria-label="Martin Capital Partners on LinkedIn">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+    </a>
+  </div>
+</footer>
 
-    <div class="footer-bottom">
-      <span>© 2026 Martin Capital Partners</span>
-      <a href="https://www.linkedin.com/company/martin-capital-partners-llc/about/" class="linkedin-icon" aria-label="LinkedIn">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-        </svg>
-      </a>
-    </div>
-  </footer>
-
-  <script>
-    const toggle = document.querySelector('.nav-toggle');
-    const menu = document.querySelector('.nav-menu');
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', menu.classList.contains('open'));
-    });
-  </script>
+</div>
+<script src="js/main.js"></script>
 </body>
 </html>
