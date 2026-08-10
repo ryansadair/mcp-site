@@ -20,7 +20,7 @@ letters = sorted(data["letters"], key=lambda x: (x["year"], x["month"]), reverse
 featured, archive = letters[0], letters[1:]
 
 def box(l):
-    return (f'    <a class="insight-box" href="{l["pdf"]}" target="_blank" rel="noopener">'
+    return (f'    <a class="insight-box reveal" href="{l["pdf"]}" target="_blank" rel="noopener">'
             f'<span>{l["title"]}</span><span class="when">{l["monthName"]} {l["year"]}</span></a>')
 
 years_html = []
@@ -29,7 +29,7 @@ for l in archive:
     if l["year"] != current_year:
         if current_year is not None:
             years_html.append("  </div>")
-        years_html.append(f'  <div class="year-block">\n    <div class="year">{l["year"]}</div>')
+        years_html.append(f'  <div class="year-block">\n    <div class="year reveal">{l["year"]}</div>')
         current_year = l["year"]
     years_html.append(box(l))
 years_html.append("  </div>")
@@ -52,11 +52,10 @@ page = f"""<!DOCTYPE html>
 
 <header class="site">
   <a class="logo" href="index.html"><img src="assets/logo.png" alt="Martin Capital Partners logo"></a>
-  <button class="menu-btn" aria-label="Open menu" onclick="openMenu()"><span></span><span></span></button>
+  <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false" onclick="toggleMenu()"><span></span><span></span></button>
 </header>
 
 <nav class="menu-overlay" id="menuOverlay" aria-label="Site menu">
-  <button class="menu-close" aria-label="Close menu" onclick="closeMenu()">&times;</button>
   <a href="index.html">Home</a>
   <a href="team.html">MCP Team</a>
   <a href="philosophy.html">Investment Philosophy</a>
@@ -68,7 +67,7 @@ page = f"""<!DOCTYPE html>
 <h1 class="page-title">Insights</h1>
 
 <div class="wrap-wide">
-  <div class="featured-letter">
+  <div class="featured-letter reveal">
     <div class="kicker">Latest &middot; Point of View</div>
     <h2>{featured["title"]}</h2>
     <div class="date">{featured["monthName"]} {featured["year"]}</div>
