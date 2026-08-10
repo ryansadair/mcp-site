@@ -174,13 +174,14 @@ body.menu-open{overflow:hidden}
 /* insights preview (home) + archive boxes */
 .center-h2{font-size:35px;text-align:center;margin-bottom:36px}
 .insight-box{
-  display:block;
+  display:flex;justify-content:space-between;gap:16px;
   border:1px solid var(--white);
   padding:14px 20px;
   font-size:15px;
   max-width:640px;margin:0 auto 22px;
-  transition:background .15s ease;
+  transition:background .15s ease,border-color .15s ease;
 }
+.insight-box .when{white-space:nowrap;color:#CDE1EA}
 .insight-box:hover{background:rgba(255,255,255,.05);border-color:rgba(201,168,76,.75)}
 .center-cta{text-align:center;margin-top:34px}
 
@@ -300,8 +301,8 @@ footer.site .copyright{font-size:12px;margin-top:4px}
   border-bottom:1px solid rgba(201,168,76,.55); /* gold hairline */
   padding-bottom:8px;margin-bottom:20px;
 }
-.year-block .insight-box{max-width:none;display:flex;justify-content:space-between;gap:16px}
-.year-block .insight-box .when{white-space:nowrap;color:#CDE1EA}
+.year-block .insight-box{max-width:none}
+
 
 /* mobile: bio modal becomes a bottom sheet */
 @media (max-width:700px){
