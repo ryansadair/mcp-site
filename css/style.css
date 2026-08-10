@@ -51,7 +51,7 @@ img{display:block;max-width:100%}
 
 /* ------------------------------------------------------------------ header */
 header.site{
-  position:relative;
+  position:relative;z-index:150;
   display:grid;
   grid-template-columns:1fr auto 1fr;
   align-items:center;
@@ -62,27 +62,42 @@ header.site .logo img{height:93px;width:auto}
 .menu-btn{
   grid-column:3;justify-self:end;
   background:none;border:none;cursor:pointer;padding:8px;
+  position:relative;z-index:150; /* stays clickable above the overlay */
 }
 .menu-btn span{
   display:block;width:26px;height:2px;background:var(--white);margin:6px 0;
+  transition:transform .3s ease,opacity .3s ease;
 }
+.menu-btn.active span:nth-child(1){transform:translateY(4px) rotate(45deg)}
+.menu-btn.active span:nth-child(2){transform:translateY(-4px) rotate(-45deg)}
 
 /* full-screen menu overlay */
 .menu-overlay{
   position:fixed;inset:0;background:rgba(0,0,0,.96);
-  display:none;flex-direction:column;align-items:center;justify-content:center;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
   gap:28px;z-index:100;
+  opacity:0;visibility:hidden;
+  transition:opacity .35s ease,visibility 0s linear .35s;
 }
-.menu-overlay.open{display:flex}
+.menu-overlay.open{
+  opacity:1;visibility:visible;
+  transition:opacity .35s ease,visibility 0s;
+}
 .menu-overlay a{
   font-family:'Wix Madefor Display',sans-serif;
   font-size:26px;font-weight:400;letter-spacing:.02em;
+  opacity:0;transform:translateY(18px);
+  transition:opacity .4s ease,transform .4s ease,color .15s ease;
 }
+.menu-overlay.open a{opacity:1;transform:none}
+.menu-overlay.open a:nth-child(1){transition-delay:.08s}
+.menu-overlay.open a:nth-child(2){transition-delay:.14s}
+.menu-overlay.open a:nth-child(3){transition-delay:.20s}
+.menu-overlay.open a:nth-child(4){transition-delay:.26s}
+.menu-overlay.open a:nth-child(5){transition-delay:.32s}
+.menu-overlay.open a:nth-child(6){transition-delay:.38s}
 .menu-overlay a:hover{color:#9FC2D2}
-.menu-close{
-  position:absolute;top:26px;right:36px;background:none;border:none;
-  color:var(--white);font-size:30px;cursor:pointer;line-height:1;
-}
+body.menu-open{overflow:hidden}
 
 /* -------------------------------------------------------------------- hero */
 .hero{
@@ -103,14 +118,17 @@ header.site .logo img{height:93px;width:auto}
   background:linear-gradient(180deg,rgba(0,0,0,.18) 0%,rgba(0,0,0,.32) 55%,rgba(0,0,0,.78) 92%,#000 100%);
 }
 .hero > :not(.hero-video){position:relative;z-index:1}
-.hero h1{font-size:86px;font-weight:800;letter-spacing:.005em}
+.hero h1{font-size:86px;font-weight:800;letter-spacing:.005em;
+  animation:heroIn .9s ease .25s both}
+.hero .tagline{animation:heroIn .9s ease .5s both}
+@keyframes heroIn{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
 .hero .tagline{
   margin-top:14px;font-size:17px;font-weight:400;letter-spacing:.02em;
 }
 .hero .tagline .sep{padding:0 10px;opacity:.9}
 
 /* header floats over the hero on home (transparent bg) */
-.home header.site{position:absolute;top:0;left:0;right:0;z-index:5}
+.home header.site{position:absolute;top:0;left:0;right:0}
 
 /* ------------------------------------------------------------------ buttons */
 .btn{
@@ -258,6 +276,13 @@ footer.site .copyright{font-size:12px;margin-top:4px}
 .year-block .insight-box{max-width:none;display:flex;justify-content:space-between;gap:16px}
 .year-block .insight-box .when{white-space:nowrap;color:#CDE1EA}
 
+/* ------------------------------------------------------------ scroll reveal */
+html.js .reveal{opacity:0;transform:translateY(26px);
+  transition:opacity .7s ease,transform .7s ease}
+html.js .reveal.in{opacity:1;transform:none}
+html.js img.reveal{transform:translateY(26px) scale(1.03)}
+html.js img.reveal.in{transform:none}
+
 /* ------------------------------------------------------------- responsive */
 @media (max-width:900px){
   .split{grid-template-columns:1fr;gap:40px}
@@ -276,5 +301,7 @@ footer.site .copyright{font-size:12px;margin-top:4px}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .btn,.insight-box{transition:none}
+  .btn,.insight-box,.menu-btn span,.menu-overlay,.menu-overlay a{transition:none}
+  .hero h1,.hero .tagline{animation:none}
+  html.js .reveal{opacity:1;transform:none;transition:none}
 }
