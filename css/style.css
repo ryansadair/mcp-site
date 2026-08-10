@@ -337,6 +337,8 @@ html.js img.reveal.in{transform:none}
 /* ------------------------------------------------------------- responsive */
 @media (max-width:900px){
   .split{grid-template-columns:1fr;gap:40px}
+  .split > div{order:1}   /* text block first on mobile */
+  .split > img{order:2}   /* image below its text */
   .team-grid{grid-template-columns:repeat(2,1fr)}
   .hero h1{font-size:44px}
   .page-title{font-size:32px}
