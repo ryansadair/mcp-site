@@ -47,7 +47,7 @@ a{color:var(--white);text-decoration:none}
 
 img{display:block;max-width:100%}
 
-.wrap{max-width:var(--max);margin:0 auto;padding:0 40px}
+.wrap{max-width:var(--max);width:100%;margin:0 auto;padding:0 40px}
 
 /* ------------------------------------------------------------------ header */
 header.site{
@@ -58,7 +58,7 @@ header.site{
   padding:14px 40px 10px;
 }
 header.site .logo{grid-column:2;justify-self:center}
-header.site .logo img{height:62px;width:auto}
+header.site .logo img{height:93px;width:auto}
 .menu-btn{
   grid-column:3;justify-self:end;
   background:none;border:none;cursor:pointer;padding:8px;
@@ -105,7 +105,7 @@ header.site .logo img{height:62px;width:auto}
   background:linear-gradient(180deg,rgba(0,0,0,.18) 0%,rgba(0,0,0,.32) 55%,rgba(0,0,0,.78) 92%,#000 100%);
 }
 .hero > :not(.hero-video){position:relative;z-index:1}
-.hero h1{font-size:72px;font-weight:700;letter-spacing:.005em}
+.hero h1{font-size:86px;font-weight:800;letter-spacing:.005em}
 .hero .tagline{
   margin-top:14px;font-size:17px;font-weight:400;letter-spacing:.02em;
 }
@@ -193,7 +193,7 @@ footer.site .copyright{font-size:12px;margin-top:4px}
 
 /* ------------------------------------------------------------- inner pages */
 .page-title{font-size:40px;text-align:center;margin:48px 0 40px}
-.prose{max-width:900px;margin:0 auto}
+.prose{max-width:900px;width:100%;margin:0 auto}
 .prose p{text-align:justify;margin-bottom:28px}
 .prose .note{font-size:13px;text-align:left;margin-top:-10px}
 .prose ul{margin:0 0 28px 22px}
@@ -241,15 +241,16 @@ footer.site .copyright{font-size:12px;margin-top:4px}
 .bio-text p{font-size:15px;line-height:1.7;text-align:justify}
 
 /* --------------------------------------------------------- insights archive */
+.wrap-wide{max-width:1440px;width:100%;margin:0 auto;padding:0 40px}
 .featured-letter{
   border:1px solid var(--white);
-  max-width:1100px;margin:0 auto 70px;
+  width:100%;margin:0 auto 70px;
   padding:38px 44px;
 }
 .featured-letter .kicker{font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px;color:#CDE1EA}
 .featured-letter h2{font-size:28px;margin-bottom:8px}
 .featured-letter .date{font-size:14px;color:#CDE1EA;margin-bottom:22px}
-.year-block{max-width:1100px;margin:0 auto 34px}
+.year-block{width:100%;margin:0 auto 34px}
 .year-block .year{
   font-family:'Wix Madefor Display',sans-serif;
   font-size:22px;font-weight:700;
@@ -264,7 +265,7 @@ footer.site .copyright{font-size:12px;margin-top:4px}
   .split{grid-template-columns:1fr;gap:40px}
   .team-grid{grid-template-columns:repeat(2,1fr)}
   .bio-body{grid-template-columns:1fr}
-  .hero h1{font-size:40px}
+  .hero h1{font-size:44px}
   .page-title{font-size:32px}
   .split h2,.center-h2,.resources h2{font-size:28px}
 }
