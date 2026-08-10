@@ -45,7 +45,7 @@ page = f"""<!DOCTYPE html>
 <link rel="icon" type="image/png" href="assets/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;700&family=Wix+Madefor+Text:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=202608102155">
+<link rel="stylesheet" href="css/style.css?v=202608102206">
 </head>
 <body>
 <div class="page">
@@ -101,10 +101,28 @@ page = f"""<!DOCTYPE html>
 </footer>
 
 </div>
-<script src="js/main.js?v=202608102155"></script>
+<script src="js/main.js?v=202608102206"></script>
 </body>
 </html>
 """
 
 (ROOT / "insights.html").write_text(page)
 print(f"insights.html generated: {len(letters)} letters, featured = {featured['title']} ({featured['monthName']} {featured['year']})")
+
+# ---- also refresh the 3 most-recent previews on the home page ----
+import re
+index_path = ROOT / "index.html"
+idx = index_path.read_text()
+preview = "\n".join(
+    f'    <a class="insight-box reveal" href="{l["pdf"]}" target="_blank" rel="noopener"><span>{l["title"]}</span><span class="when">{l["monthName"]} {l["year"]}</span></a>'
+    for l in letters[:3]
+)
+new_block = ("    <!-- INSIGHTS:START (managed by scripts/build_insights.py - do not edit by hand) -->\n"
+             + preview
+             + "\n    <!-- INSIGHTS:END -->")
+idx, n = re.subn(r"    <!-- INSIGHTS:START.*?INSIGHTS:END -->", new_block, idx, flags=re.S)
+if n == 1:
+    index_path.write_text(idx)
+    print(f"index.html preview refreshed: {', '.join(l['title'] for l in letters[:3])}")
+else:
+    print("WARNING: INSIGHTS markers not found in index.html - home preview NOT updated")
