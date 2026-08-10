@@ -7,6 +7,7 @@
 
 :root{
   --blue:#0A415A;
+  --gold:#C9A84C;
   --white:#FFFFFF;
   --gray:#8F8F8F;
   --black:#000000;
@@ -96,7 +97,7 @@ header.site .logo img{height:140px;width:auto}
 .menu-overlay.open a:nth-child(4){transition-delay:.26s}
 .menu-overlay.open a:nth-child(5){transition-delay:.32s}
 .menu-overlay.open a:nth-child(6){transition-delay:.38s}
-.menu-overlay a:hover{color:#9FC2D2}
+.menu-overlay a:hover{color:var(--gold)}
 body.menu-open{overflow:hidden}
 
 /* -------------------------------------------------------------------- hero */
@@ -125,7 +126,7 @@ body.menu-open{overflow:hidden}
 .hero .tagline{
   margin-top:14px;font-size:17px;font-weight:400;letter-spacing:.02em;
 }
-.hero .tagline .sep{padding:0 10px;opacity:.9}
+.hero .tagline .sep{padding:0 10px;color:var(--gold)}
 
 /* header floats over the hero on home (transparent bg) */
 .home header.site{position:absolute;top:0;left:0;right:0}
@@ -139,7 +140,7 @@ body.menu-open{overflow:hidden}
   background:transparent;
   transition:background .15s ease;
 }
-.btn:hover{background:rgba(255,255,255,.10)}
+.btn:hover{background:rgba(255,255,255,.06);border-color:var(--gold)}
 .arrow{
   display:inline-block;position:relative;width:34px;height:1.5px;background:var(--white);
 }
@@ -154,8 +155,11 @@ body.menu-open{overflow:hidden}
   display:inline-flex;align-items:center;gap:12px;
   font-size:15px;text-decoration:none;
   cursor:pointer;background:none;border:none;color:var(--white);
-  font-family:inherit;
+  font-family:inherit;transition:color .15s ease;
 }
+.more-link:hover{color:var(--gold)}
+.more-link:hover .arrow{background:var(--gold)}
+.more-link:hover .arrow::after{border-color:var(--gold)}
 
 /* ----------------------------------------------------------- home sections */
 .section{padding:90px 0}
@@ -177,7 +181,7 @@ body.menu-open{overflow:hidden}
   max-width:640px;margin:0 auto 22px;
   transition:background .15s ease;
 }
-.insight-box:hover{background:rgba(255,255,255,.08)}
+.insight-box:hover{background:rgba(255,255,255,.05);border-color:rgba(201,168,76,.75)}
 .center-cta{text-align:center;margin-top:34px}
 
 /* client resources */
@@ -191,7 +195,7 @@ footer.site{
   padding:40px 40px 28px;
 }
 footer.site .rule{
-  border-top:1px solid var(--hairline);
+  border-top:1px solid rgba(201,168,76,.55); /* gold hairline */
   max-width:calc(var(--max) - 80px);margin:0 auto 30px;
 }
 .footer-inner{max-width:var(--max);margin:0 auto;position:relative}
@@ -230,31 +234,54 @@ footer.site .copyright{font-size:12px;margin-top:4px}
 
 /* ---------------------------------------------------------------- bio modal */
 .modal-backdrop{
-  position:fixed;inset:0;background:rgba(0,0,0,.6);
+  position:fixed;inset:0;background:rgba(4,20,28,.65);
+  backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
   display:none;align-items:center;justify-content:center;z-index:200;padding:24px;
 }
 .modal-backdrop.open{display:flex}
 .bio-modal{
   background:var(--blue);
-  width:min(940px,100%);
-  max-height:90vh;overflow-y:auto;
-  padding:44px 48px;
-  position:relative;
+  width:min(880px,100%);
+  max-height:88vh;
+  display:grid;grid-template-columns:300px 1fr;
+  overflow:hidden;position:relative;
+  animation:modalIn .35s ease both;
 }
+@keyframes modalIn{
+  from{opacity:0;transform:scale(.97) translateY(10px)}
+  to{opacity:1;transform:none}
+}
+.bio-photo{border-right:1px solid rgba(201,168,76,.5)}
+.bio-photo img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.bio-content{
+  padding:44px 46px 38px;
+  overflow-y:auto;max-height:88vh;
+}
+.bio-content .name{
+  font-family:'Wix Madefor Display',sans-serif;
+  font-size:28px;font-weight:700;line-height:1.15;
+}
+.bio-content .role{
+  font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--gold);margin-top:6px;
+}
+.gold-rule{width:44px;height:2px;background:var(--gold);margin:18px 0 20px}
+.bio-stats{font-size:15px;margin-bottom:18px}
+.bio-stats strong{font-weight:700}
+.bio-line{font-size:14px;line-height:1.55;margin-bottom:10px}
+.bio-line span{
+  display:block;font-size:11px;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:#9FC2D2;margin-bottom:2px;
+}
+.bio-text{margin-top:22px;padding-top:22px;border-top:1px solid rgba(255,255,255,.18)}
+.bio-text p{font-size:15px;line-height:1.7;text-align:left}
 .bio-close{
-  position:absolute;top:22px;right:26px;
+  position:absolute;top:18px;right:22px;z-index:2;
   background:none;border:none;color:var(--white);
   font-size:26px;font-weight:300;cursor:pointer;line-height:1;
+  transition:color .15s ease;
 }
-.bio-head{display:flex;gap:26px;align-items:flex-end;margin-bottom:30px}
-.bio-head img{width:140px;height:175px;object-fit:cover;object-position:top center}
-.bio-head .name{font-size:24px;font-weight:700}
-.bio-head .role{font-size:13px;font-weight:700;margin-top:2px}
-.bio-body{display:grid;grid-template-columns:280px 1fr;gap:40px}
-.bio-facts h4{font-size:14px;font-weight:700;margin-bottom:6px}
-.bio-facts ul{list-style:disc;margin:0 0 18px 20px}
-.bio-facts li{font-size:14px;line-height:1.5}
-.bio-text p{font-size:15px;line-height:1.7;text-align:justify}
+.bio-close:hover{color:var(--gold)}
 
 /* --------------------------------------------------------- insights archive */
 .wrap-wide{max-width:1440px;width:100%;margin:0 auto;padding:0 40px}
@@ -263,18 +290,42 @@ footer.site .copyright{font-size:12px;margin-top:4px}
   width:100%;margin:0 auto 70px;
   padding:38px 44px;
 }
-.featured-letter .kicker{font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px;color:#CDE1EA}
+.featured-letter .kicker{font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px;color:var(--gold)}
 .featured-letter h2{font-size:28px;margin-bottom:8px}
 .featured-letter .date{font-size:14px;color:#CDE1EA;margin-bottom:22px}
 .year-block{width:100%;margin:0 auto 34px}
 .year-block .year{
   font-family:'Wix Madefor Display',sans-serif;
   font-size:22px;font-weight:700;
-  border-bottom:1px solid var(--hairline);
+  border-bottom:1px solid rgba(201,168,76,.55); /* gold hairline */
   padding-bottom:8px;margin-bottom:20px;
 }
 .year-block .insight-box{max-width:none;display:flex;justify-content:space-between;gap:16px}
 .year-block .insight-box .when{white-space:nowrap;color:#CDE1EA}
+
+/* mobile: bio modal becomes a bottom sheet */
+@media (max-width:700px){
+  .modal-backdrop{align-items:flex-end;padding:0}
+  .bio-modal{
+    display:block;width:100%;
+    border-radius:18px 18px 0 0;
+    max-height:88vh;overflow-y:auto;
+    animation:sheetUp .4s cubic-bezier(.32,.72,.35,1) both;
+    padding-top:12px;
+  }
+  .bio-modal::before{ /* drag handle */
+    content:"";display:block;width:40px;height:4px;border-radius:4px;
+    background:rgba(255,255,255,.35);margin:0 auto 6px;
+  }
+  @keyframes sheetUp{from{transform:translateY(100%)}to{transform:none}}
+  .bio-photo{
+    width:108px;height:134px;margin:14px 0 0 26px;
+    border:1px solid rgba(201,168,76,.6);border-right-width:1px;
+    border-radius:10px;overflow:hidden;
+  }
+  .bio-content{padding:18px 26px 34px;max-height:none;overflow:visible}
+  .bio-content .name{font-size:24px}
+}
 
 /* ------------------------------------------------------------ scroll reveal */
 html.js .reveal{opacity:0;transform:translateY(26px);
@@ -287,18 +338,12 @@ html.js img.reveal.in{transform:none}
 @media (max-width:900px){
   .split{grid-template-columns:1fr;gap:40px}
   .team-grid{grid-template-columns:repeat(2,1fr)}
-  .bio-body{grid-template-columns:1fr}
   .hero h1{font-size:44px}
   .page-title{font-size:32px}
   .split h2,.center-h2,.resources h2{font-size:28px}
 }
 @media (max-width:560px){
   .wrap{padding:0 22px}
-  .bio-modal{padding:30px 24px}
-  .bio-head{flex-direction:column;align-items:flex-start;gap:16px;margin-bottom:24px}
-  .bio-head img{width:110px;height:138px}
-  .bio-head .name{font-size:22px}
-  .bio-body{gap:26px}
   header.site{padding:12px 22px 8px}
   .team-grid{grid-template-columns:1fr;padding:0 22px}
   .section{padding:60px 0}
@@ -307,6 +352,6 @@ html.js img.reveal.in{transform:none}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .btn,.insight-box,.menu-btn span,.menu-overlay,.menu-overlay a{transition:none}
-  .hero h1,.hero .tagline{animation:none}
+  .hero h1,.hero .tagline,.bio-modal{animation:none}
   html.js .reveal{opacity:1;transform:none;transition:none}
 }
