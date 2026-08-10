@@ -67,7 +67,7 @@ page = f"""<!DOCTYPE html>
 
 <h1 class="page-title">Insights</h1>
 
-<div class="wrap">
+<div class="wrap-wide">
   <div class="featured-letter">
     <div class="kicker">Latest &middot; Point of View</div>
     <h2>{featured["title"]}</h2>
