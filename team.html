@@ -15,11 +15,10 @@
 
 <header class="site">
   <a class="logo" href="index.html"><img src="assets/logo.png" alt="Martin Capital Partners logo"></a>
-  <button class="menu-btn" aria-label="Open menu" onclick="openMenu()"><span></span><span></span></button>
+  <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false" onclick="toggleMenu()"><span></span><span></span></button>
 </header>
 
 <nav class="menu-overlay" id="menuOverlay" aria-label="Site menu">
-  <button class="menu-close" aria-label="Close menu" onclick="closeMenu()">&times;</button>
   <a href="index.html">Home</a>
   <a href="team.html" onclick="closeMenu()">MCP Team</a>
   <a href="philosophy.html">Investment Philosophy</a>
@@ -31,35 +30,35 @@
 <h1 class="page-title">MCP Team</h1>
 
 <div class="wrap prose">
-  <p>Martin Capital Partners, LLC, is an Oregon based, SEC Registered Investment Advisory firm managing $306 million in client assets*. Founded in 2010 and specializing in the management of dividend strategies for institutional and private clients, MCP has decades of combined industry tenure spanning multiple market cycles.</p>
-  <p>With a steadfast concentration as dividend focused investors, MCP has cultivated insight in this style of investing not found in many organizations, particularly one of our boutique size. Importantly, we believe this focus and experience leads to greater transparency and enhanced process clarity, benefiting investor outcomes.</p>
-  <p>We seek to serve our valued partners with integrity and transparency by building, managing, and preserving wealth through long-term, dividend-focused investing.</p>
+  <p class="reveal">Martin Capital Partners, LLC, is an Oregon based, SEC Registered Investment Advisory firm managing $306 million in client assets*. Founded in 2010 and specializing in the management of dividend strategies for institutional and private clients, MCP has decades of combined industry tenure spanning multiple market cycles.</p>
+  <p class="reveal">With a steadfast concentration as dividend focused investors, MCP has cultivated insight in this style of investing not found in many organizations, particularly one of our boutique size. Importantly, we believe this focus and experience leads to greater transparency and enhanced process clarity, benefiting investor outcomes.</p>
+  <p class="reveal">We seek to serve our valued partners with integrity and transparency by building, managing, and preserving wealth through long-term, dividend-focused investing.</p>
   <p class="note">*Assets as of 12/31/2025</p>
 </div>
 
 <div class="team-grid">
-  <div class="member">
+  <div class="member reveal">
     <img class="photo" src="assets/cameron.jpg" alt="Cameron Martin">
     <p class="name">Cameron Martin</p>
     <p class="role">Chief Investment Officer</p>
     <p class="teaser">Cameron co-founded Martin Capital Partners in 2010 and is the firm's Chief Investment Officer. From 2023 to 2025, he also co-managed...</p>
     <button class="more-link" onclick="openBio('cameron')">More <span class="arrow"></span></button>
   </div>
-  <div class="member">
+  <div class="member reveal">
     <img class="photo" src="assets/reid.jpg" alt="Reid Weaver">
     <p class="name">Reid Weaver, CFA</p>
     <p class="role">Portfolio Manager</p>
     <p class="teaser">Reid co-founded Martin Capital Partners in 2010 and is a portfolio manager and research analyst. From 2023 to 2025, he also co-managed...</p>
     <button class="more-link" onclick="openBio('reid')">More <span class="arrow"></span></button>
   </div>
-  <div class="member">
+  <div class="member reveal">
     <img class="photo" src="assets/ryan.jpg" alt="Ryan Adair">
     <p class="name">Ryan Adair</p>
     <p class="role">Operations &amp; Trading</p>
     <p class="teaser">Ryan joined Martin Capital Partners in 2019. His primary responsibilities involve portfolio administration, trading and client service...</p>
     <button class="more-link" onclick="openBio('ryan')">More <span class="arrow"></span></button>
   </div>
-  <div class="member">
+  <div class="member reveal">
     <img class="photo" src="assets/andy.jpg" alt="Andy Papendieck">
     <p class="name">Andy Papendieck</p>
     <p class="role">Client Portfolio Manager</p>

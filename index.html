@@ -15,11 +15,10 @@
 
 <header class="site">
   <a class="logo" href="index.html"><img src="assets/logo.png" alt="Martin Capital Partners logo"></a>
-  <button class="menu-btn" aria-label="Open menu" onclick="openMenu()"><span></span><span></span></button>
+  <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false" onclick="toggleMenu()"><span></span><span></span></button>
 </header>
 
 <nav class="menu-overlay" id="menuOverlay" aria-label="Site menu">
-  <button class="menu-close" aria-label="Close menu" onclick="closeMenu()">&times;</button>
   <a href="index.html" onclick="closeMenu()">Home</a>
   <a href="team.html">MCP Team</a>
   <a href="philosophy.html">Investment Philosophy</a>
@@ -38,19 +37,19 @@
 
 <section class="section">
   <div class="wrap split">
-    <div>
+    <div class="reveal">
       <h2>MCP Team</h2>
       <p>Martin Capital Partners, LLC, is an Oregon based, SEC Registered Investment Advisory firm managing $306 million in client assets*. Founded in 2010 and specializing in the management of dividend strategies for institutional and private clients, MCP has decades of combined industry tenure spanning multiple market cycles...</p>
       <div class="cta"><a class="btn" href="team.html">Meet The Team <span class="arrow"></span></a></div>
     </div>
-    <img src="assets/lighthouse.jpg" alt="Heceta Head Lighthouse on the Oregon coast">
+    <img class="reveal" src="assets/lighthouse.jpg" alt="Heceta Head Lighthouse on the Oregon coast">
   </div>
 </section>
 
 <section class="section">
   <div class="wrap split">
-    <img src="assets/city.jpg" alt="City street at sunset">
-    <div>
+    <img class="reveal" src="assets/city.jpg" alt="City street at sunset">
+    <div class="reveal">
       <h2>Investment Philosophy</h2>
       <p>We seek to build investment portfolios that produce consistent, absolute returns, with mitigated risk and volatility. To accomplish this, we leverage a long-term horizon, aimed at capitalizing on the power of reinvested and compounded dividends from high quality companies with distinct competitive advantages...</p>
       <div class="cta"><a class="btn" href="philosophy.html">Learn More <span class="arrow"></span></a></div>
@@ -60,19 +59,19 @@
 
 <section class="section">
   <div class="wrap">
-    <h2 class="center-h2">Insights</h2>
-    <a class="insight-box" href="assets/letters/2026-jul-the-comfort-of-crowds.pdf" target="_blank" rel="noopener">The Comfort of Crowds - July 2026</a>
-    <a class="insight-box" href="assets/letters/2026-apr-durability-vs-prediction.pdf" target="_blank" rel="noopener">Durability vs. Prediction - April 2026</a>
-    <a class="insight-box" href="assets/letters/2026-jan-paid-better-taking-less-risk.pdf" target="_blank" rel="noopener">Paid Better Taking Less Risk - January 2026</a>
-    <div class="center-cta"><a class="btn" href="insights.html">See All <span class="arrow"></span></a></div>
+    <h2 class="center-h2 reveal">Insights</h2>
+    <a class="insight-box reveal" href="assets/letters/2026-jul-the-comfort-of-crowds.pdf" target="_blank" rel="noopener">The Comfort of Crowds - July 2026</a>
+    <a class="insight-box reveal" href="assets/letters/2026-apr-durability-vs-prediction.pdf" target="_blank" rel="noopener">Durability vs. Prediction - April 2026</a>
+    <a class="insight-box reveal" href="assets/letters/2026-jan-paid-better-taking-less-risk.pdf" target="_blank" rel="noopener">Paid Better Taking Less Risk - January 2026</a>
+    <div class="center-cta reveal"><a class="btn" href="insights.html">See All <span class="arrow"></span></a></div>
   </div>
 </section>
 
 <section class="section resources" id="resources">
   <div class="wrap">
-    <h2>Client Resources</h2>
-    <a class="btn" href="https://martincp.portal.tamaracinc.com/Login.aspx" target="_blank" rel="noopener">Client Portal</a>
-    <a class="btn" href="https://www.schwab.com/client-home" target="_blank" rel="noopener">Charles Schwab</a>
+    <h2 class="reveal">Client Resources</h2>
+    <a class="btn reveal" href="https://martincp.portal.tamaracinc.com/Login.aspx" target="_blank" rel="noopener">Client Portal</a>
+    <a class="btn reveal" href="https://www.schwab.com/client-home" target="_blank" rel="noopener">Charles Schwab</a>
   </div>
 </section>
 
