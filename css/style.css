@@ -58,7 +58,7 @@ header.site{
   padding:14px 40px 10px;
 }
 header.site .logo{grid-column:2;justify-self:center}
-header.site .logo img{height:93px;width:auto}
+header.site .logo img{height:140px;width:auto}
 .menu-btn{
   grid-column:3;justify-self:end;
   background:none;border:none;cursor:pointer;padding:8px;
@@ -152,7 +152,7 @@ body.menu-open{overflow:hidden}
 /* underlined "More" link with arrow */
 .more-link{
   display:inline-flex;align-items:center;gap:12px;
-  font-size:15px;text-decoration:underline;text-underline-offset:4px;
+  font-size:15px;text-decoration:none;
   cursor:pointer;background:none;border:none;color:var(--white);
   font-family:inherit;
 }
@@ -294,6 +294,11 @@ html.js img.reveal.in{transform:none}
 }
 @media (max-width:560px){
   .wrap{padding:0 22px}
+  .bio-modal{padding:30px 24px}
+  .bio-head{flex-direction:column;align-items:flex-start;gap:16px;margin-bottom:24px}
+  .bio-head img{width:110px;height:138px}
+  .bio-head .name{font-size:22px}
+  .bio-body{gap:26px}
   header.site{padding:12px 22px 8px}
   .team-grid{grid-template-columns:1fr;padding:0 22px}
   .section{padding:60px 0}
