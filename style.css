@@ -1,0 +1,281 @@
+/* ==========================================================================
+   Martin Capital Partners — martincp.com static rebuild
+   Theme extracted from live Wix site:
+     Fonts:  Wix Madefor Display (headings) / Wix Madefor Text (body)
+     Colors: #000 base, #0A415A deep blue, #FFF text
+   ========================================================================== */
+
+:root{
+  --blue:#0A415A;
+  --white:#FFFFFF;
+  --gray:#8F8F8F;
+  --black:#000000;
+  --hairline:rgba(255,255,255,.55);
+  --max:1200px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+html{scroll-behavior:smooth}
+
+body{
+  background:var(--black);
+  color:var(--white);
+  font-family:'Wix Madefor Text',HelveticaNeue,Helvetica,Arial,sans-serif;
+  font-size:17px;
+  line-height:1.6;
+  font-weight:400;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* Page background: black fading into the deep blue toward the footer,
+   matching the live site's long gradient */
+.page{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  background:linear-gradient(180deg,#000 0%,#000 58%,#04222F 82%,var(--blue) 100%);
+}
+
+h1,h2,h3{
+  font-family:'Wix Madefor Display',HelveticaNeue,Helvetica,Arial,sans-serif;
+  font-weight:700;
+  line-height:1.2;
+}
+
+a{color:var(--white);text-decoration:none}
+
+img{display:block;max-width:100%}
+
+.wrap{max-width:var(--max);margin:0 auto;padding:0 40px}
+
+/* ------------------------------------------------------------------ header */
+header.site{
+  position:relative;
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
+  padding:14px 40px 10px;
+}
+header.site .logo{grid-column:2;justify-self:center}
+header.site .logo img{height:62px;width:auto}
+.menu-btn{
+  grid-column:3;justify-self:end;
+  background:none;border:none;cursor:pointer;padding:8px;
+}
+.menu-btn span{
+  display:block;width:26px;height:2px;background:var(--white);margin:6px 0;
+}
+
+/* full-screen menu overlay */
+.menu-overlay{
+  position:fixed;inset:0;background:rgba(0,0,0,.96);
+  display:none;flex-direction:column;align-items:center;justify-content:center;
+  gap:28px;z-index:100;
+}
+.menu-overlay.open{display:flex}
+.menu-overlay a{
+  font-family:'Wix Madefor Display',sans-serif;
+  font-size:26px;font-weight:400;letter-spacing:.02em;
+}
+.menu-overlay a:hover{color:#9FC2D2}
+.menu-close{
+  position:absolute;top:26px;right:36px;background:none;border:none;
+  color:var(--white);font-size:30px;cursor:pointer;line-height:1;
+}
+
+/* -------------------------------------------------------------------- hero */
+.hero{
+  position:relative;
+  height:100vh;min-height:640px;
+  overflow:hidden;
+  background-size:cover;background-position:center 30%;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;
+  margin-top:-86px; /* media runs behind the header */
+  padding-top:86px;
+}
+.hero-video{
+  position:absolute;inset:0;
+  width:100%;height:100%;
+  object-fit:cover;object-position:center 30%;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,.18) 0%,rgba(0,0,0,.32) 55%,rgba(0,0,0,.78) 92%,#000 100%);
+}
+.hero > :not(.hero-video){position:relative;z-index:1}
+.hero h1{font-size:72px;font-weight:700;letter-spacing:.005em}
+.hero .tagline{
+  margin-top:14px;font-size:17px;font-weight:400;letter-spacing:.02em;
+}
+.hero .tagline .sep{padding:0 10px;opacity:.9}
+
+/* header sits above hero photo on home */
+.home header.site{z-index:5}
+
+/* ------------------------------------------------------------------ buttons */
+.btn{
+  display:inline-flex;align-items:center;gap:14px;
+  border:1px solid var(--white);border-radius:100px;
+  padding:10px 26px;
+  font-size:14px;color:var(--white);
+  background:transparent;
+  transition:background .15s ease;
+}
+.btn:hover{background:rgba(255,255,255,.10)}
+.arrow{
+  display:inline-block;position:relative;width:34px;height:1.5px;background:var(--white);
+}
+.arrow::after{
+  content:"";position:absolute;right:-1px;top:50%;
+  width:8px;height:8px;border-top:1.5px solid var(--white);border-right:1.5px solid var(--white);
+  transform:translateY(-50%) rotate(45deg);
+}
+
+/* underlined "More" link with arrow */
+.more-link{
+  display:inline-flex;align-items:center;gap:12px;
+  font-size:15px;text-decoration:underline;text-underline-offset:4px;
+  cursor:pointer;background:none;border:none;color:var(--white);
+  font-family:inherit;
+}
+
+/* ----------------------------------------------------------- home sections */
+.section{padding:90px 0}
+.split{
+  display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;
+}
+.split h2{font-size:35px;margin-bottom:26px;text-align:center}
+.split p{text-align:justify;margin-bottom:30px}
+.split .cta{text-align:center}
+.split img{width:100%;max-width:460px;justify-self:center}
+
+/* insights preview (home) + archive boxes */
+.center-h2{font-size:35px;text-align:center;margin-bottom:36px}
+.insight-box{
+  display:block;
+  border:1px solid var(--white);
+  padding:14px 20px;
+  font-size:15px;
+  max-width:640px;margin:0 auto 22px;
+  transition:background .15s ease;
+}
+.insight-box:hover{background:rgba(255,255,255,.08)}
+.center-cta{text-align:center;margin-top:34px}
+
+/* client resources */
+.resources{text-align:center}
+.resources h2{font-size:35px;margin-bottom:34px}
+.resources .btn{margin:0 12px}
+
+/* ------------------------------------------------------------------ footer */
+footer.site{
+  margin-top:auto;
+  padding:40px 40px 28px;
+}
+footer.site .rule{
+  border-top:1px solid var(--hairline);
+  max-width:calc(var(--max) - 80px);margin:0 auto 30px;
+}
+.footer-inner{max-width:var(--max);margin:0 auto;position:relative}
+footer.site h3{font-size:20px;margin-bottom:16px}
+footer.site p{font-size:13px;line-height:1.55}
+footer.site .addr{margin-bottom:22px}
+footer.site .addr .firm{font-weight:700}
+footer.site .legal a{display:block;font-size:12px;line-height:1.7}
+footer.site .copyright{font-size:12px;margin-top:4px}
+.linkedin{
+  position:absolute;right:0;bottom:0;
+}
+.linkedin svg{width:22px;height:22px;fill:var(--white);opacity:.9}
+.linkedin:hover svg{opacity:1}
+
+/* ------------------------------------------------------------- inner pages */
+.page-title{font-size:40px;text-align:center;margin:48px 0 40px}
+.prose{max-width:900px;margin:0 auto}
+.prose p{text-align:justify;margin-bottom:28px}
+.prose .note{font-size:13px;text-align:left;margin-top:-10px}
+.prose ul{margin:0 0 28px 22px}
+.prose li{text-align:justify;margin-bottom:20px}
+
+/* ------------------------------------------------------------ team page */
+.team-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:36px;
+  max-width:var(--max);margin:70px auto 40px;padding:0 40px;
+}
+.member .photo{
+  width:100%;aspect-ratio:10/13;object-fit:cover;object-position:top center;
+  margin-bottom:20px;
+}
+.member .name{font-size:17px;font-weight:700;margin-bottom:2px}
+.member .role{font-size:15px;margin-bottom:14px}
+.member .teaser{font-size:15px;line-height:1.55;margin-bottom:16px}
+
+/* ---------------------------------------------------------------- bio modal */
+.modal-backdrop{
+  position:fixed;inset:0;background:rgba(0,0,0,.6);
+  display:none;align-items:center;justify-content:center;z-index:200;padding:24px;
+}
+.modal-backdrop.open{display:flex}
+.bio-modal{
+  background:var(--blue);
+  width:min(940px,100%);
+  max-height:90vh;overflow-y:auto;
+  padding:44px 48px;
+  position:relative;
+}
+.bio-close{
+  position:absolute;top:22px;right:26px;
+  background:none;border:none;color:var(--white);
+  font-size:26px;font-weight:300;cursor:pointer;line-height:1;
+}
+.bio-head{display:flex;gap:26px;align-items:flex-end;margin-bottom:30px}
+.bio-head img{width:140px;height:175px;object-fit:cover;object-position:top center}
+.bio-head .name{font-size:24px;font-weight:700}
+.bio-head .role{font-size:13px;font-weight:700;margin-top:2px}
+.bio-body{display:grid;grid-template-columns:280px 1fr;gap:40px}
+.bio-facts h4{font-size:14px;font-weight:700;margin-bottom:6px}
+.bio-facts ul{list-style:disc;margin:0 0 18px 20px}
+.bio-facts li{font-size:14px;line-height:1.5}
+.bio-text p{font-size:15px;line-height:1.7;text-align:justify}
+
+/* --------------------------------------------------------- insights archive */
+.featured-letter{
+  border:1px solid var(--white);
+  max-width:1100px;margin:0 auto 70px;
+  padding:38px 44px;
+}
+.featured-letter .kicker{font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px;color:#CDE1EA}
+.featured-letter h2{font-size:28px;margin-bottom:8px}
+.featured-letter .date{font-size:14px;color:#CDE1EA;margin-bottom:22px}
+.year-block{max-width:1100px;margin:0 auto 34px}
+.year-block .year{
+  font-family:'Wix Madefor Display',sans-serif;
+  font-size:22px;font-weight:700;
+  border-bottom:1px solid var(--hairline);
+  padding-bottom:8px;margin-bottom:20px;
+}
+.year-block .insight-box{max-width:none;display:flex;justify-content:space-between;gap:16px}
+.year-block .insight-box .when{white-space:nowrap;color:#CDE1EA}
+
+/* ------------------------------------------------------------- responsive */
+@media (max-width:900px){
+  .split{grid-template-columns:1fr;gap:40px}
+  .team-grid{grid-template-columns:repeat(2,1fr)}
+  .bio-body{grid-template-columns:1fr}
+  .hero h1{font-size:40px}
+  .page-title{font-size:32px}
+  .split h2,.center-h2,.resources h2{font-size:28px}
+}
+@media (max-width:560px){
+  .wrap{padding:0 22px}
+  header.site{padding:12px 22px 8px}
+  .team-grid{grid-template-columns:1fr;padding:0 22px}
+  .section{padding:60px 0}
+  footer.site{padding:32px 22px 22px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .btn,.insight-box{transition:none}
+}
