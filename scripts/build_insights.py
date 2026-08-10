@@ -45,7 +45,7 @@ page = f"""<!DOCTYPE html>
 <link rel="icon" type="image/png" href="assets/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;700&family=Wix+Madefor+Text:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=202608102130">
+<link rel="stylesheet" href="css/style.css?v=202608102140">
 </head>
 <body>
 <div class="page">
@@ -101,7 +101,7 @@ page = f"""<!DOCTYPE html>
 </footer>
 
 </div>
-<script src="js/main.js?v=202608102130"></script>
+<script src="js/main.js?v=202608102140"></script>
 </body>
 </html>
 """
