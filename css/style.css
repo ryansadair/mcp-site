@@ -275,7 +275,7 @@ footer.site .copyright{font-size:12px;margin-top:4px}
   text-transform:uppercase;color:#9FC2D2;margin-bottom:2px;
 }
 .bio-text{margin-top:22px;padding-top:22px;border-top:1px solid rgba(255,255,255,.18)}
-.bio-text p{font-size:15px;line-height:1.7;text-align:left}
+.bio-text p{font-size:15px;line-height:1.7;text-align:justify}
 .bio-close{
   position:absolute;top:18px;right:22px;z-index:2;
   background:none;border:none;color:var(--white);
