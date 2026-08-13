@@ -1,9 +1,4 @@
-# PRE-LAUNCH: blocking all crawlers while the Wix site remains canonical.
-# AT CUTOVER replace this file's contents with the three lines below:
-#
-# User-agent: *
-# Allow: /
-# Sitemap: https://www.martincp.com/sitemap.xml
-
 User-agent: *
-Disallow: /
+Allow: /
+
+Sitemap: https://www.martincp.com/sitemap.xml
