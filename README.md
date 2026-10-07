@@ -13,7 +13,7 @@ insights.html       GENERATED — do not edit by hand (see below)
 css/style.css       Single shared stylesheet (theme extracted from the live Wix site)
 js/main.js          Menu overlay + bio modals
 assets/             All images (originals pulled from the live site, web-optimized)
-data/letters.json   Source of truth for the Insights archive (56 letters)
+data/letters.json   Source of truth for the Insights archive (57 letters)
 scripts/build_insights.py   Regenerates insights.html from letters.json
 ```
 
@@ -28,7 +28,7 @@ scripts/build_insights.py   Regenerates insights.html from letters.json
 3. Commit and push. The newest letter automatically becomes the featured
    letter; the archive regroups by year.
 
-All 56 letter PDFs live in `assets/letters/` with clean, stable filenames
+All 57 letter PDFs live in `assets/letters/` with clean, stable filenames
 (`2026-jul-the-comfort-of-crowds.pdf`). The four legal documents live in
 `assets/docs/`. The site has zero dependency on Wix.
 
